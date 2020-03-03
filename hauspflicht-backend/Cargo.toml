@@ -1,0 +1,9 @@
+[package]
+name = "hauspflicht-backend"
+version = "0.1.0"
+authors = ["Raoul Hagmaier <rh@wiped.pw>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
