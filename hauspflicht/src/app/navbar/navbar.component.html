@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">Hauspflicht</a>
+  <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="chores" ngbButton>Chores</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="household" ngbButton>Household</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown" ngbDropdown>
+        <a class="nav-link dropdown-toggle" id="dropdown-profile" routerLink="" ngbDropdownToggle>Username</a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-profile" ngbDropdownMenu>
+          <a class="dropdown-item" href="#">Switch active user</a>
+          <a class="dropdown-item" routerLink="manage-household" >Manage Household</a>
+          <a class="dropdown-item" routerLink="logout">Logout</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
