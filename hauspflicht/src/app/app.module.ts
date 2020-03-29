@@ -1,27 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { ChoresComponent } from './chores/chores.component';
-import { HouseholdComponent } from './household/household.component';
-import { ManageHouseholdComponent } from './manage-household/manage-household.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavigationComponent } from './auth-content/global/navigation/navigation.component';
+import { AuthContentComponent } from './auth-content/auth-content.component';
+import { LoginComponent } from './_non-auth-content/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    ChoresComponent,
-    HouseholdComponent,
-    ManageHouseholdComponent
+    NavigationComponent,
+    AuthContentComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

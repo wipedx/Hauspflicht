@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ManageHouseholdComponent } from './manage-household.component';
+import { AuthContentComponent } from './auth-content.component';
 
-describe('ManageHouseholdComponent', () => {
-  let component: ManageHouseholdComponent;
-  let fixture: ComponentFixture<ManageHouseholdComponent>;
+describe('AuthContentComponent', () => {
+  let component: AuthContentComponent;
+  let fixture: ComponentFixture<AuthContentComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ManageHouseholdComponent ]
+      declarations: [ AuthContentComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ManageHouseholdComponent);
+    fixture = TestBed.createComponent(AuthContentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

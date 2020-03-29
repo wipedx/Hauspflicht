@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ChoresComponent } from './chores/chores.component';
-import { HouseholdComponent } from './household/household.component';
-import { ManageHouseholdComponent } from './manage-household/manage-household.component';
+import { AuthContentComponent } from './auth-content/auth-content.component';
+import { AuthGuard } from './_helpers/auth.guard';
+import { OverviewComponent } from './auth-content/overview/overview.component';
+
 
 const routes: Routes = [
-  { path: '', redirectTo: '/chores', pathMatch: 'full' },
-  { path: 'chores', component: ChoresComponent },
-  { path: 'household', component: HouseholdComponent },
-  { path: 'manage-household', component: ManageHouseholdComponent }
+  { path: '', canActivateChild: [AuthGuard], children: [
+      { path: '', component: OverviewComponent}
+    ]
+  },
+  { path: '**', component: AuthContentComponent }
 ];
 
 @NgModule({
