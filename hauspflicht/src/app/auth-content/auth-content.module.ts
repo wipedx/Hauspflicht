@@ -5,6 +5,8 @@ import { AuthContentRoutingModule } from './auth-content-routing.module';
 import { AuthContentComponent } from './auth-content.component';
 import { NavigationComponent } from './global/navigation/navigation.component';
 
+import { MaterialModule } from '../_helpers/material.module';
+
 @NgModule({
   declarations: [
     AuthContentComponent,
@@ -13,7 +15,8 @@ import { NavigationComponent } from './global/navigation/navigation.component';
   ],
   imports: [
     CommonModule,
-    AuthContentRoutingModule
+    AuthContentRoutingModule,
+    MaterialModule
   ]
 })
 export class AuthContentModule { }
