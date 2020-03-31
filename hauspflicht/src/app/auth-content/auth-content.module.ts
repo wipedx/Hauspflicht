@@ -6,12 +6,14 @@ import { AuthContentComponent } from './auth-content.component';
 import { NavigationComponent } from './global/navigation/navigation.component';
 
 import { MaterialModule } from '../_helpers/material.module';
+import { ProfileMenuComponent } from './global/navigation/profile-menu/profile-menu.component';
 
 @NgModule({
   declarations: [
     AuthContentComponent,
     OverviewComponent,
-    NavigationComponent
+    NavigationComponent,
+    ProfileMenuComponent
   ],
   imports: [
     CommonModule,

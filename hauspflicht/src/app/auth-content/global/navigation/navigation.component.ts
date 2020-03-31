@@ -5,6 +5,7 @@ class NavList {
   type?: EntryType = EntryType.ENTRY;
   name?: string;
   children?: NavList[];
+  icon?: string;
 }
 @Component({
   selector: 'app-navigation',
@@ -22,7 +23,7 @@ export class NavigationComponent implements OnDestroy {
 
   nav: NavList[] = [
     { name: 'Stock overview' },
-    { name: 'Shopping List' },
+    { name: 'Shopping List', icon: 'shopping_cart' },
     { type: EntryType.SEPARATOR },
     { name: 'Recipes' },
     { name: 'Meal plan' },
